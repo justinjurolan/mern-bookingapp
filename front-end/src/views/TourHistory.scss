@@ -1,0 +1,113 @@
+@import '../components/global';
+
+.Tour-History {
+  width: 80%;
+  margin: 5% auto;
+  padding: 20px;
+  position: relative;
+  font-family: $primary-font;
+
+  & .Message_Modal{
+    position: fixed;
+    width: 350px;
+    height: 100px;
+    background-color: #88df39;
+    top: 10%;
+    right: 40%; 
+    text-align: center;
+    transition: .3s;
+    
+    & h4{
+      margin:30px auto;
+      font-family: $primary-font;
+      font-size: 1.5rem;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(18, 160, 25);
+    color:white;
+    border: none;
+    cursor: pointer;
+  }
+
+ &  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    display: inline-block;
+ }
+
+  .Tour-History-Content {
+    margin-top: 40px;
+
+    th {
+      padding: 10px;
+    }
+
+
+    table {
+      width: 100%;
+      padding-bottom: 10px;
+      border-collapse: collapse;
+      text-align: left;
+
+      & thead{
+
+        tr{
+          background-color: #2B65EC;
+        }
+
+        th {
+          color: white;
+          font-size: 1rem;
+          text-align: center;
+
+        }
+
+        
+      }
+
+    
+      & tbody{
+
+        tr {
+  
+         
+  
+          td {
+            padding: 15px;
+            text-align: center;
+  
+            & img {
+             width: 100px;
+            }
+
+            & .Tour-History__actions{
+              img{
+                width: 30px;
+                cursor: pointer;
+              }
+            }
+  
+          }
+        }
+        
+      tr:nth-child(even) {
+        background-color: #edeef1;
+       }
+      }
+
+
+    }
+
+
+
+
+  }
+
+}

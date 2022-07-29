@@ -1,0 +1,32 @@
+.update-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px;
+  text-align: center;
+}
+
+.input-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-name label {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.input-name input {
+  padding: 7px 20px;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  margin: 30px;
+  padding: 15px 40px;
+  cursor: pointer;
+  background-color: aqua;
+  border: 1px solid black;
+  border-radius: 15px;
+}

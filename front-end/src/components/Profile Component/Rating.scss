@@ -1,0 +1,126 @@
+@import '../global';
+
+.Rating {
+    text-align: center;
+    font-family: $primary-font;
+    width: 500px;
+    margin: 150px auto;
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 3px 5px rgb(179, 178, 178);
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+
+
+    & h3 {
+        margin: 20px 0;
+        font-size: 30px;
+        font-weight: 300;
+
+
+
+    }
+
+
+
+    &__details {
+
+        background-color: #e8e7f4;
+        padding: 15px;
+        line-height: 30px;
+
+
+
+        &-name {
+
+            @include flex(column, nowrap, center, center);
+
+            label {
+                font-size: 20px;
+            }
+
+            input {
+                width: 300px;
+                height: 30px;
+                border-radius: 5px;
+
+                border: none;
+                margin: 10px 0;
+                outline: none;
+            }
+        }
+
+
+        &-rate {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        &-rating {
+            @include flex(row, nowrap, center, center);
+            gap: 15px;
+            cursor: pointer;
+
+            & input[type="radio"] {
+                display: none;
+
+
+            }
+
+        }
+
+
+
+
+        & textarea {
+            resize: none;
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+
+            border: none;
+            margin: 15px 0;
+            padding: 15px;
+            outline: none;
+
+
+        }
+
+        & textarea::placeholder {
+            color: gray;
+            font-size: 18px;
+        }
+
+
+        &-btn {
+            width: 300px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: #2B65EC;
+            border: 0;
+            color: black;
+            font-size: 20px;
+            font-family: $primary-font;
+            cursor: pointer;
+            margin: 10px 0;
+
+        }
+
+        &-btn:hover {
+            background-color: rgb(48, 48, 48);
+            transition: .3s;
+            color: white;
+        }
+    }
+
+}

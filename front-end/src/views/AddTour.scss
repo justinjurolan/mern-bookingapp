@@ -1,0 +1,650 @@
+@import '../components/global';
+
+
+
+.AddTours {
+  width: 60%;
+  margin: 75px auto;
+  background-color: #2a313f;
+  height: 80vh;
+  padding-top: 50px;
+
+
+  &-container {
+    width: 100%;
+    background-color: #3b4052;
+    height: 90%;
+    @include flex(row, nowrap, none, none);
+
+
+    .container {
+      width: 50%;
+      padding: 20px;
+
+    }
+
+    .Add-details {
+
+      label {
+        display: block;
+        font-family: $primary-font;
+      }
+
+      input {
+        width: 320px;
+        margin-left: 30px;
+        display: inline-block;
+        border-radius: 2px;
+        border: none;
+        outline: none;
+        height: 30px;
+        padding-left: 10px;
+        margin-top: 10px;
+        font-family: $primary-font;
+        background-color: #323747;
+        color: white
+      }
+
+
+
+      .Add-details__inputs {
+        @include flex(row, wrap, center, center);
+        margin-top: 40px;
+
+        label {
+          display: block;
+        }
+
+        input {
+          width: 220px;
+          margin: 20px;
+          border-radius: 2px;
+          border: none;
+          outline: none;
+          height: 30px;
+          padding-left: 10px;
+          font-family: $primary-font;
+
+        }
+      }
+
+      .Add-details__textarea {
+        @include flex(row, nowrap, space-evenly, center);
+
+        margin-top: 50px;
+
+
+        textarea {
+          width: 230px;
+          height: 220px;
+          resize: none;
+          padding: 20px;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          font-family: $primary-font;
+          background-color: #323747;
+          color: white;
+          margin-top: 10px;
+
+
+        }
+
+
+      }
+    }
+
+    .Add-images {
+
+
+      &__input {
+
+        height: 40px;
+        margin-top: 40px;
+
+
+        input {
+          cursor: pointer;
+          font-family: $primary-font;
+        }
+      }
+
+      &__display {
+        width: 100%;
+        height: 250px;
+
+        padding: 20px;
+        overflow: hidden;
+        font-family: $primary-font;
+
+        @include flex(row, wrap, none, none);
+
+        .image-list {
+          list-style: none;
+          margin-right: 10px;
+
+
+          img {
+            width: 100px;
+            height: 100px;
+          }
+
+          button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            cursor: pointer;
+
+            img {
+              width: 20px;
+              height: 20px;
+
+            }
+          }
+        }
+      }
+
+      &__btns {
+        @include flex(row, nowrap, none, none);
+        margin-top: 40px;
+        font-family: $primary-font;
+
+
+        .Add-image-imageCover {
+          width: 60%;
+
+          height: 200px;
+
+          .Add-image-imageCover {
+            height: 40px;
+
+            width: 100%;
+
+            input {
+              cursor: pointer;
+              font-family: $primary-font;
+            }
+          }
+
+          .Add-imagecover-display {
+            padding: 20px;
+            overflow: hidden;
+
+            li {
+              list-style: none;
+
+              img {
+
+                width: 100px;
+                height: 100px;
+
+              }
+
+              button {
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                cursor: pointer;
+
+
+                img {
+                  width: 20px;
+                  height: 20px;
+
+                }
+              }
+            }
+
+          }
+        }
+
+        .Add-images-btns {
+
+          width: 40%;
+
+          button {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            font-family: $primary-font;
+            background-color: #2B65EC;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          button:hover {
+            background-color: gray;
+            transition: .3s;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .AddEdit-btnSave {
+    width: 100px;
+    height: 30px;
+    margin: 15px 50px;
+    font-family: $primary-font;
+    background-color: #2B65EC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .AddEdit-btnSave:hover {
+    background-color: gray;
+    transition: .3s;
+  }
+}
+
+.AddModal {
+  background-color: rgba(128, 128, 128, 0.884);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  .AddModal-startLocation {
+    width: 20%;
+    height: 450px;
+    margin: auto;
+    background-color: #3c4256;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: $primary-font;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+
+
+    div {
+      padding: 5px;
+      background-color: #3d4355;
+      line-height: 40px;
+
+      div {
+        label {
+          display: block;
+        }
+
+        input {
+          width: 150px;
+          height: 30px;
+          font-family: $primary-font;
+          padding-left: 5px;
+          outline: none;
+          border-radius: 5px;
+          border: none;
+          background-color: #323747;
+          color: white;
+          margin-left: 5px;
+
+        }
+
+
+
+      }
+
+      input {
+        width: 306px;
+        height: 30px;
+        font-family: $primary-font;
+        padding-left: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-color: #323747;
+        color: white;
+        margin-left: 10px;
+
+      }
+
+
+      button {
+        width: 120px;
+        height: 30px;
+        font-family: $primary-font;
+        background-color: #2B65EC;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px 0 0 10px;
+
+      }
+
+      button:hover {
+        background-color: gray;
+        transition: .3s;
+      }
+
+      .btn-startLocation {
+        margin-left: 65px;
+      }
+    }
+
+  }
+}
+
+.AddModal {
+  background-color: rgba(128, 128, 128, 0.884);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  .AddModal-locations {
+    width: 20%;
+    height: 740px;
+    margin: auto;
+    background-color: #3c4256;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: $primary-font;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+
+    div {
+      padding: 5px;
+      background-color: #3d4355;
+      line-height: 40px;
+
+      label {
+        display: block;
+      }
+
+      .AddModal-coordinates {
+        input {
+          width: 150px;
+          height: 30px;
+          font-family: $primary-font;
+          padding-left: 5px;
+          outline: none;
+          border-radius: 5px;
+          border: none;
+          background-color: #323747;
+          color: white;
+          margin-left: 5px;
+
+        }
+
+
+
+      }
+
+      input {
+        width: 306px;
+        height: 30px;
+        font-family: $primary-font;
+        padding-left: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-color: #323747;
+        color: white;
+        margin-left: 10px;
+
+      }
+
+
+
+      .days {
+        width: 120px;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .AddModal-addedLocation {
+        height: 120px;
+        width: 92%;
+        margin: 10px 10px;
+        border-radius: 5px;
+
+        font-size: 13px;
+
+        @include flex(row, wrap, none, center);
+
+      }
+
+      button {
+        width: 120px;
+        height: 30px;
+        font-family: $primary-font;
+        background-color: #2B65EC;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px 0 0 10px;
+
+      }
+
+      button:hover {
+        background-color: gray;
+        transition: .3s;
+      }
+
+      .btn-addLocation {
+        margin-left: 63px;
+      }
+
+    }
+  }
+}
+
+.AddModal {
+
+
+  .AddModal-tags {
+    width: 20%;
+    height: 300px;
+    margin: auto;
+    background-color: #3c4256;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: $primary-font;
+    line-height: 30px;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+
+    div {
+      padding: 8px;
+      background-color: #3d4355;
+
+      input {
+        width: 306px;
+        height: 30px;
+        font-family: $primary-font;
+        padding-left: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-color: #323747;
+        color: white;
+        margin-left: 10px;
+      }
+
+
+      .AddModal-addedTags {
+        height: 80px;
+        width: 94%;
+        margin: 10px 10px;
+
+        border-radius: 5px;
+        font-size: 13px;
+
+        @include flex(row, wrap, none, center);
+      }
+
+      button {
+        width: 120px;
+        height: 30px;
+        font-family: $primary-font;
+        background-color: #2B65EC;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px 0 0 10px;
+
+      }
+
+      button:hover {
+        background-color: gray;
+        transition: .3s;
+      }
+
+      .btn-addTags {
+        margin-left: 63px;
+      }
+
+    }
+
+  }
+}
+
+.AddModal {
+  background-color: rgba(128, 128, 128, 0.884);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  .AddModal-tour-guide {
+    width: 20%;
+    height: 300px;
+    margin: auto;
+    background-color: #3c4256;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: $primary-font;
+    line-height: 30px;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+
+    div {
+      padding: 8px;
+      background-color: #3d4355;
+
+      input {
+        width: 306px;
+        height: 30px;
+        font-family: $primary-font;
+        padding-left: 5px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-color: #323747;
+        color: whitez;
+        margin-left: 10px;
+      }
+
+
+
+      .AddModal-addedTourGuide {
+        height: 100px;
+        width: 94%;
+        margin: 10px 10px;
+
+        border-radius: 5px;
+        font-size: 10px;
+        @include flex(row, wrap, none, none);
+      }
+
+      button {
+        width: 120px;
+        height: 30px;
+        font-family: $primary-font;
+        background-color: #2B65EC;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 15px 0 0 10px;
+
+      }
+
+      button:hover {
+        background-color: gray;
+        transition: .3s;
+      }
+
+      .btn-addTourGuide {
+        margin-left: 63px;
+      }
+
+    }
+
+  }
+}
+
+.success-modal {
+  background-color: rgba(0, 0, 0, 0.685);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+
+  div {
+    width: 30%;
+    height: 80px;
+    background-color: red;
+    font-family: $primary-font;
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    right: 35%;
+    border-radius: 10px;
+
+    p {
+      font-size: 30px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+  }
+
+}
+
+// .lds-hourglass {
+//   display: inline-block;
+//   position: relative;
+//   width: 80px;
+//   height: 80px;
+// }
+
+// .lds-hourglass:after {
+//   content: " ";
+//   display: block;
+//   border-radius: 50%;
+//   width: 0;
+//   height: 0;
+//   margin: 8px;
+//   box-sizing: border-box;
+//   border: 32px solid #fff;
+//   border-color: #fff transparent #fff transparent;
+//   animation: lds-hourglass 1.2s infinite;
+// }
+
+// @keyframes lds-hourglass {
+//   0% {
+//     transform: rotate(0);
+//     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+//   }
+
+//   50% {
+//     transform: rotate(900deg);
+//     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+//   }
+
+//   100% {
+//     transform: rotate(1800deg);
+//   }
+// }

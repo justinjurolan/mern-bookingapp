@@ -1,0 +1,128 @@
+@import '../global';
+
+.Tours-title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: $primary-font;
+    font-weight: bold;
+
+}
+
+.Tours {
+
+    @include flex(row, wrap, center, center);
+    margin-top: 50px;
+
+    .TourPackages {
+        cursor: pointer;
+
+        background-color: rgb(255, 255, 255);
+        width: 300px;
+        margin-bottom: 20px;
+        @include flex(column, nowrap, center, center);
+        border: 1px solid rgb(208, 208, 208);
+        font-family: $primary-font;
+        margin: 80px 50px;
+        box-shadow: 2px 4px #d0d0d0;
+        border-radius: 15px;
+        min-height: 700px;
+
+        &-img {
+
+            height: 350px;
+
+
+
+            img {
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+
+            }
+        }
+
+        &-list {
+
+            height: 350px;
+            padding: 20px;
+
+            h3 {
+                color: #2B65EC;
+                margin-bottom: 15px;
+
+            }
+
+            &__rate {
+                color: #f18a23;
+                margin-left: 15px;
+            }
+
+            &__location {
+                color: #646D7E;
+                margin: 10px 0;
+            }
+
+            &__review {
+                color: rgb(144, 144, 144);
+                font-size: .7rem;
+                margin-left: 12px;
+
+                span {
+                    color: #2B65EC;
+                }
+            }
+
+            h5 {
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+
+            }
+
+            &__description {
+                font-size: .9rem;
+                margin-top: 20px;
+                color: #646D7E;
+
+                span {
+                    display: block;
+                    text-align: right;
+                    margin-top: 20px;
+                    color: #2B65EC;
+                }
+            }
+
+        }
+
+    }
+
+    .TourPackages:hover {
+        border: .5px solid rgb(90, 90, 90);
+        box-shadow: 2px 5px rgb(170, 170, 170);
+
+    }
+
+
+    .stars {
+        position: relative;
+        white-space: nowrap;
+
+
+        & input[type="radio"] {
+            display: none;
+        }
+    }
+
+    .cover {
+        background: white;
+        height: 100%;
+        overflow: hidden;
+        mix-blend-mode: color;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
+}

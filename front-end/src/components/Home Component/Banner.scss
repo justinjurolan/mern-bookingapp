@@ -1,0 +1,46 @@
+@import '../global';
+
+
+.Banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.weseektravel.com/wp-content/uploads/2019/07/things-to-do-in-cebu-50-1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    font-family: $primary-font;
+
+    & h2 {
+
+        margin: 180px 110px;
+        font-size: 80px;
+        text-align: right;
+        color: rgba(255, 255, 255, 0.76);
+
+    }
+
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+
+    & svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 109px;
+    }
+
+    & .shape-fill {
+        fill: #FFFFFF;
+    }
+
+}

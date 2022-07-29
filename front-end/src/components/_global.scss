@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+
+$primary-font: 'Albert Sans', sans-serif;
+
+@mixin flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}   

@@ -1,0 +1,129 @@
+@import '../components/global';
+.Tour {
+  padding: 10px 0;
+  width: 60vw;
+  margin: auto;
+
+  &__hero {
+    @include flex(row, nowrap, space-between, center);
+
+    & .Tour__Title {
+      margin: 10px 0;
+      padding: 0;
+      font-family: $primary-font;
+
+      & h3 {
+        font-size: 2rem;
+
+        & span {
+          color: #2b65ec;
+        }
+      }
+    }
+
+    & .filter-section {
+      margin-right: 20px;
+
+      & select {
+        width: 250px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__information {
+    margin: 50px 0;
+    @include flex(row, wrap, center, center);
+    gap: 10px;
+
+    & .filter-section {
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-family: $primary-font;
+      width: 250px;
+      padding: 20px 30px;
+      letter-spacing: 2px;
+      position: sticky;
+      top: 10px;
+
+      & div {
+        margin-top: 5px;
+
+        & input {
+          margin: 10px 0;
+        }
+
+        & h3 {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    & .details-section {
+      font-family: $primary-font;
+
+      &__choices {
+        padding: 20px 0;
+        width: 800px;
+        border: 1px gray solid;
+        border-radius: 2px;
+        @include flex(row, nowrap, flex-start, center);
+        gap: 35px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+
+        &:hover {
+          background-color: rgba(240, 255, 255, 0.603);
+          border: 2px solid;
+          border-color: #2b65ec;
+        }
+
+        & .image {
+          padding: 15px 0;
+
+          & img {
+            width: 270px;
+            height: 270px;
+            margin-left: 10px;
+            border-radius: 5px;
+          }
+        }
+
+        & .details {
+          & h3 {
+            color: #2b65ec;
+            margin-bottom: 10px;
+          }
+
+          & .stars {
+            & div {
+              display: inline-block;
+            }
+
+            & input[type='radio'] {
+              display: none;
+            }
+          }
+
+          & h4 {
+            margin: 20px 0 10px 0;
+          }
+          & p {
+            margin-right: 40px;
+            height: 96 px;
+            overflow: hidden;
+            text-align: justify;
+          }
+
+          & .price {
+            background-color: rgb(241, 61, 61);
+            color: white;
+            width: 30%;
+            padding: 16px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

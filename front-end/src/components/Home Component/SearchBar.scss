@@ -1,0 +1,78 @@
+@import '../global';
+
+.SearchBar {
+    text-align: center;
+    margin-top: 130px;
+    position: relative;
+
+    & h3 {
+        margin-bottom: 100px;
+        font-size: 3rem;
+    }
+
+    &__options {
+        @include flex(row, wrap, center, center);
+        background-color: #2f93894a;
+        width: 40%;
+        padding: 20px 0;
+        margin: -20px auto;
+        gap: 10px;
+
+
+        & .searchForm {
+            @include flex(column, nowrap, flex-start, flex-start);
+            gap: 5px;
+
+
+
+            & label {
+                font-size: 1.3rem;
+                color: white;
+            }
+
+            & button {
+                height: 45px;
+                width: 100px;
+                margin-top: 28px;
+                border-radius: 3px;
+                border: none;
+                background-color: rgb(4, 122, 23);
+                color: white;
+                font-weight: bold;
+            }
+
+            &__text {
+
+                width: 500px;
+                height: 40px;
+                background-color: white;
+                @include flex(row, nowrap, center, center);
+                gap: 5px;
+
+                & img {
+                    width: 25px;
+
+                }
+
+                & input {
+                    display: inline-block;
+                    height: 30px;
+                    border: none;
+                    text-decoration: none;
+                    background-color: transparent;
+                    outline: none;
+                    width: 450px;
+                    padding-left: 10px;
+
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+}

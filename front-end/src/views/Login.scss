@@ -1,0 +1,115 @@
+@import '../components/global';
+
+.login-container {
+  height: 100vh;
+  font-family: $primary-font;
+  @include flex(row, nowrap, center, center);
+  position: relative;
+
+  .login-information {
+    width: 35%;
+    text-align: center;
+    padding-bottom: 100px;
+
+
+
+
+
+    h3 {
+      font-size: 30px;
+      margin: 10px 0;
+
+
+    }
+
+    &__details {
+      font-size: 15px;
+      color: rgb(112, 112, 112);
+      margin: 10px 0;
+    }
+
+    &__details:nth-child(7) {
+      margin-left: 180px;
+    }
+
+    &__details:nth-child(7):hover {
+      color: #2B65EC;
+      cursor: pointer;
+    }
+
+    &__input {
+      height: 35px;
+      border-radius: 5px;
+      width: 300px;
+      border: 1px solid rgb(171, 171, 171);
+      padding: 10px;
+      margin: 5px 0;
+    }
+
+    &__input:focus {
+
+      outline: none !important;
+      border: 2px solid #2b65ec8f;
+
+    }
+
+    &__input::placeholder {
+      color: rgb(116, 116, 116);
+    }
+
+
+    &__logo {
+      width: 100px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    &__btn {
+      padding: 10px;
+      width: 300px;
+      background-color: #42aadd;
+      color: black;
+      border-radius: 10px;
+      margin: 30px 0 10px 0;
+      border: none;
+    }
+
+    &__btn:hover {
+      background-color: black;
+      cursor: pointer;
+      transition: .6s;
+      color: white;
+    }
+
+    span {
+      color: #2B65EC;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    span:hover {
+      color: #6090ff;
+    }
+
+    &__copyright {
+      position: absolute;
+      bottom: 3px;
+      left: 32px;
+    }
+  }
+
+  .login-image {
+    width: 65%;
+    background-color: blue;
+    height: 100vh;
+
+
+
+    background-image: url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-left: 6px solid #42aadd;
+
+  }
+}

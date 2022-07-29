@@ -1,0 +1,221 @@
+@import '../components/global';
+
+.profile{
+    @include flex(row, wrap,center,none);
+    font-family: $primary-font;
+    margin-top: 20px;
+    gap: 50px;
+
+    &__section{
+        border: 1px solid gray;
+        width: 300px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 20px;
+
+        & h4{
+            margin-bottom: 35px;
+        }
+     
+        & img{
+            width: 150px;
+            margin: 10px auto;
+            
+            
+        }
+
+        & .profile-details{
+            margin: 20px auto;
+            @include flex(column, nowrap, flex-start,  flex-start);
+            gap:20px;
+            
+            & span{
+                display: inline-block;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-left: 10px;
+                
+                
+            }
+        }
+
+        & .profile-verifcation{
+            border-top: 1px solid rgba(187, 185, 185, 0.979);
+            text-align: left;
+            padding: 30px 0;
+            @include flex(column, nowrap, center, flex-start );
+            gap:10px;
+
+            & h3{
+                font-size: 1.5rem;
+            }
+
+            & div{
+                span{
+                    display: inline-block;
+                    margin: 10px 0 5px 10px;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+    }
+
+    &__information{
+        padding: 20px 0;
+        width: 40%;
+        & h3{
+            font-size: 1.8rem;
+            color: #2B65EC;
+        }
+
+        & .credentials{
+            margin-top: 50px;
+
+            & p{
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+            }
+
+            & button{
+                width: 180px;
+                height: 30px;
+                background-color: #2B65EC;
+                color: white;
+                border: none;
+                font-weight: bold;
+            }
+
+            & button:nth-last-child(1){
+                margin-left: 20px;
+            }
+        }
+
+        & .your-reviews{
+            margin-top:40px;
+            border-top: 1px solid black;
+
+            & h3{
+                margin-top:30px;
+            }
+
+            & .Tour-Review{
+                @include flex(row, nowrap, center, center);
+                gap: 20px;
+                margin-top: 20px;
+                &__image{
+                    img{
+                        width: 100px;
+                        border-radius: 80%;
+                    }
+                }
+                &__details{
+                    p{
+                        text-align: justify;
+                    }
+                }
+            
+            }
+        }
+
+        
+    }
+
+   
+
+
+
+}
+.Profile-History {
+  width: 80%;
+  margin: 5% auto;
+  padding: 20px;
+  position: relative;
+  font-family: $primary-font;
+  
+  
+   &  h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 2rem;
+      display: inline-block;
+   }
+  
+    .Profile-History-Content {
+      margin-top: 40px;
+  
+      table {
+        width: 100%;
+        padding-bottom: 10px;
+        border-collapse: collapse;
+        text-align: left;
+  
+        & thead{
+  
+          tr{
+            background-color: #2B65EC;
+          }
+  
+          th {
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            padding: 10px;
+  
+          }
+        }
+  
+      
+        & tbody{
+  
+          tr {
+
+            & button{
+              background-color: rgb(114, 190, 114);
+              height: 40px;
+              color:white;
+              width: 140px;
+              font-family: $primary-font;
+              border: none;
+              cursor: pointer;
+
+              &:hover{
+                background-color: rgb(81, 169, 175);
+              }
+            }
+            td {
+              padding: 15px;
+              text-align: center;
+    
+              & img {
+               width: 100px;
+              }
+            
+    
+            }
+          }
+          
+        tr:nth-child(even) {
+          background-color: #edeef1;
+         }
+        }
+  
+  
+      }
+  
+  
+  
+  
+    }
+  
+  }
+
+.Rating-modal{
+  background-color: rgba(0, 0, 0, 0.753);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+}

@@ -1,0 +1,121 @@
+@import '../components/global';
+
+@import '../components/global';
+
+.AddEditTours {
+  @include flex(row, nowrap, flex-start, center);
+  font-family: $primary-font;
+  padding-left: 100px;
+
+  background-image: url('../components/Images/palawan.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  .container {
+    width: 20%;
+    @include flex(column, nowrap, center, center);
+    border: 1px solid rgb(184, 182, 182);
+    height: 60vh;
+    margin: 0 0 30px 100px;
+    position: relative;
+    gap: 10px;
+    background-color: #e2e2e2b5;
+    border-top: .1px;
+    box-shadow: 2px 3px rgb(116, 115, 115);
+    border-radius: 15px;
+
+    h3 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-bottom: 2px solid rgb(209, 209, 209);
+      text-transform: uppercase;
+
+      span {
+        color: #2B65EC;
+      }
+    }
+
+    .AddEdit-input {
+      width: 230px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgb(105, 101, 101);
+      padding-left: 10px;
+      transition: width 0.4s ease-in-out;
+      background-color: transparent;
+    }
+
+    .AddEdit-input::placeholder {
+      text-align: center;
+      font-family: $primary-font;
+    }
+
+
+
+    .AddEdit-description {
+
+      width: 240px;
+      height: 150px;
+      transition: width 0.4s ease-in-out;
+      resize: none;
+      padding: 10px;
+
+    }
+
+    .AddEdit-description::placeholder {
+      padding-top: 50px;
+      text-align: center;
+      font-family: $primary-font;
+    }
+
+
+
+
+
+
+    .duration-price {
+
+      &__input {
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid rgb(105, 101, 101);
+        padding-left: 10px;
+        transition: width 0.4s ease-in-out;
+        margin: 10px;
+        font-family: $primary-font;
+        background-color: transparent;
+        outline: none;
+
+      }
+
+
+    }
+
+    .duration-price::placeholder {
+      text-align: center;
+      font-family: $primary-font;
+    }
+
+    .AddEdit-btn {
+      width: 60px;
+      align-self: flex-end;
+      margin-right: 20px;
+      height: 30px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      background-color: transparent;
+      border: 1px solid rgb(105, 101, 101);
+      font-family: $primary-font;
+    }
+
+    .AddEdit-btn:hover {
+      background-color: #a3a3a38f;
+      border: 2px solid #2b65ec8f;
+    }
+  }
+}
